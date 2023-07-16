@@ -31,4 +31,8 @@ for path in files_path:
             pdf.cell(w=200, h=10, txt=line_text, ln=1)
             line_text = ''
 
+        # convert all text to pdf body by multi cell function:
+        pdf.ln(25)
+        pdf.multi_cell(w=0, h=10, txt=text)
+
 pdf.output('PDFs/animals.pdf')
